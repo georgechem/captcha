@@ -5,8 +5,8 @@ error_reporting(E_ALL);
 
 $config = require __DIR__ . '/config.php';
 
-$width = 180;
-$height = 80;
+$width = 160;
+$height = 60;
 
 if($config['mode'] === 'development'){
     putenv('GDFONTPATH=/home/grzegorz/www/apps/projects/captcha-app/src/php/');
@@ -24,10 +24,10 @@ imagefill($img, 0, 0, $bgColor);
 $colors = [];
 $color = [];
 $j = 0;
-for($i=130;$i>40;$i-=0.5){
+for($i=140;$i>60;$i-=0.5){
     $color = imagecolorallocate($img, $i, $i, $i);
     $posX = rand(0,160);
-    imagerectangle($img,$j,0, 179, 79, $color);
+    imagerectangle($img,$j,0, 159, 59, $color);
     $j++;
 }
 
@@ -42,7 +42,7 @@ for($i=0; $i<5; $i++){
 
 }
 
-imagettftext($img, 36, 0, 20,45, $fontColor, $fontName, $text);
+imagettftext($img, 30, 0, 20,45, $fontColor, $fontName, $text);
 
 imagefilter($img, IMG_FILTER_PIXELATE,2);
 imagefilter($img, IMG_FILTER_GAUSSIAN_BLUR,1);
