@@ -1,6 +1,6 @@
 # 🚀 Generate captcha in PHP on server side using GD library!
 
-![image](https://github.com/georgechem/reponame/blob/master/captcha.jpg)
+![image](https://github.com/georgechem/captcha/blob/master/captcha.jpg)
 
 Captcha is generated on server side and send to client. Client has 5min to verify it.
 Otherwise, captcha is discarded and need to be reloaded. Captcha can be reloaded any 
